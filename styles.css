@@ -1,0 +1,102 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+
+    font-weight: normal;
+
+}
+
+body {    
+    animation-name: background-animation;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+.calculator-grid{
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    min-height: 100vh;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: minmax(10px, auto) repeat(5, 50px);
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+
+.calculator-grid > button {
+    cursor: pointer;
+    font-size: 2rem;
+    border: 1px solid white;
+    outline: none;
+    background-color: rgba(255, 255, 255, .75);
+
+}
+
+.calculator-grid > button:hover {
+    background-color: rgba(255, 255, 255, .90);
+
+}
+
+.span-two{
+    grid-column: span 2;
+}
+
+.output {
+    grid-column: 1 / -1;
+    background-color: rgba(0, 0, 0, .50);
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    flex-direction: column;
+    padding: 10px;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+.output .previous-operand {
+    color: rgba(255, 255, 255, .75);
+    font-size: 1.5rem;
+}
+
+.output .current-operand {
+    color: white;
+    font-size: 2.5rem;
+}
+
+.web-title{
+text-align: center;
+font-family: Copperplate, Papyrus, fantasy;
+font-size: medium;
+border: black;
+font-style: italic;
+}
+.credits{
+  margin-bottom: 5px;
+  font-size: small;
+  text-align: center;
+  margin-top: -150px;
+}
+
+
+@keyframes background-animation{
+        0% {
+          background: #966B9D;
+        }
+        25% {
+          background: #CF5C36;
+        }
+        50% {
+          background: #EFC88B;
+        }
+        75% {
+          background: #F4E3B2;
+        }
+        100% {
+          background: #D3D5D7;
+        }
+      }
+
+     
+
